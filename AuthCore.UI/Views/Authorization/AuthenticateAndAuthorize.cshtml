@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "AuthenticateAndAuthorize";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Restricted area with Authorization for any Role</h2>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8">
+        <div>
+            <p>@User.Identity.Name, welcome to this restricted area, your authorization has been confirmed.</p>
+
+            <p>If you want to add another role please <a asp-action="Index">click</a> here.</p>
+        </div>
+    </div>
+</div>

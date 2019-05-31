@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "ErrorAccessDenied";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Error: Access Denied</h2>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8">
+        <div>
+            <p>You are loged in, but not authorized for your last action. AUTHORIZATION FAILED!.</p>
+
+            <a asp-controller="Authorization" asp-action="Index">Get Authorization</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@using System.Security.Claims;
+
+@{
+    ViewData["Title"] = "ManageUser";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Manage User</h2>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8">
+        <div>
+            <p>Welcome @User.Identity.Name, you are authorized to access this section:</p>
+
+            <div>
+                <label>Name:</label> @User.Identity.Name
+                <br />
+                <label>Roles:</label>
+                <ul>
+                    @foreach (var claim in User.Claims)
+                    {
+                        if (@claim.Type == ClaimTypes.Role)
+                        {
+                            <li>@claim.Value.ToString()</li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
